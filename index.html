@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frasebyggeren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Frasebyggeren 🧱</h1>
+        <p>Dra ordklossene til byggeplassen for å lage frasen som beskrevet.</p>
+
+        <div id="progress-area">
+            <p>Poeng: <span id="score">0</span></p>
+            <p>Oppgave <span id="current-task-number">0</span> / <span id="total-tasks">0</span></p>
+        </div>
+
+        <div id="game-area" style="display: none;"> {/* Skjules før start */}
+            <h3 id="instruction">Bygg frasen: <span id="target-phrase-type">Laster...</span></h3>
+
+            <div id="word-source-container">
+                <h4>Tilgjengelige byggeklosser:</h4>
+                <div id="word-source">
+                    <!-- Draggable word blocks will appear here -->
+                </div>
+            </div>
+
+            <div id="drop-zone-container">
+                <h4>Din frase (dra klossene hit i riktig rekkefølge):</h4>
+                <div id="drop-zone">
+                    <!-- Drop word blocks here -->
+                </div>
+            </div>
+
+            <div id="controls">
+                <button id="check-btn" class="game-button">Sjekk frase</button>
+                <button id="next-task-btn" class="game-button" style="display: none;">Neste oppgave</button>
+            </div>
+        </div>
+
+        <button id="start-btn">Start spillet</button>
+
+        <div id="feedback-area">
+             <p id="feedback-message"></p>
+        </div>
+
+        <div id="game-over-screen" style="display: none;">
+            <h2>Spillet er ferdig!</h2>
+            <p>Din endelige poengsum: <span id="final-score">0</span></p>
+            <button id="restart-btn">Spill Igjen</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
